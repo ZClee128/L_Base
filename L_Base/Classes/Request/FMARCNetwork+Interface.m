@@ -7,7 +7,7 @@
 //
 
 #import "FMARCNetwork+Interface.h"
-
+#import "FMHttpRequest.h"
 @implementation FMARCNetwork (Interface)
 
 - (RACSignal *)xqc_request:(FMHttpRequest *)request

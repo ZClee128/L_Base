@@ -11,7 +11,29 @@
  */
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+
 @class FMHttpRequest;
+
+
+/// 状态码key
+#define HTTPServiceResponseCodeKey @"code"
+/// 消息key
+#define HTTPServiceResponseMsgKey @"msg"
+/// 数据data
+#define HTTPServiceResponseDataKey  @"data"
+
+// 分页
+#define HTTPServiceResponsePageNo @"pageNo"
+
+// 一页大小
+#define HTTPServiceResponsePageSize @"pageSize"
+
+// 总数
+#define HTTPServiceResponseTotalCount @"totalCount"
+
+// 总页数
+#define HTTPServiceResponseTotalPages @"totalPages"
 
 #define HTTPClient [FMARCNetwork sharedInstance]
 FOUNDATION_EXPORT NSInteger const kXQCHttpReponseSucessCode;

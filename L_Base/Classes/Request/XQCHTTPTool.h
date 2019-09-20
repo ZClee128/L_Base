@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "FMHttpRequest.h"
-
+#import <AFNetworking/AFNetworking.h>
 // 预设超时时长:秒
 const static NSInteger XQCHttpRequestTimeoutDefault     = 60;
 const static NSInteger XQCHttpRequestTimeoutOneMinute   = 60;

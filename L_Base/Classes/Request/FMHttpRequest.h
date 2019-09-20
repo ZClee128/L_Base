@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+
+
+#define APP_BUNDLE_VERSION              [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
 
 /// 请求Method
 /// GET 请求

@@ -82,7 +82,7 @@
 - (void)showResponseMessages
 {
     if (self.responseMessage) {
-        HSYCOCOAKIT_IGNORED_SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING([MBProgressHUD performSelector:NSSelectorFromString(@{@(YES) : @"showSuccessProgress:", @(NO) : @"showFailureProgress:"}[@(self.code == 0)]) withObject:self.responseMessage]);
+//        HSYCOCOAKIT_IGNORED_SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING([MBProgressHUD performSelector:NSSelectorFromString(@{@(YES) : @"showSuccessProgress:", @(NO) : @"showFailureProgress:"}[@(self.code == 0)]) withObject:self.responseMessage]);
     }
 }
 

@@ -11,10 +11,6 @@
 #import "FMHttpResonse.h"
 #import "AFNetworking.h"
 #import "AFNetworkActivityIndicatorManager.h"
-#import "JDStatusBarNotification.h"
-#import "MBProgressHUD.h"
-#import "XQCUserManager.h"
-#import "XQCH5Manager.h"
 
 NSInteger const kXQCHttpReponseSucessCode                       = 0;
 NSInteger const kXQCUnionpayPayPasswordLockedStatusCode         = 77;
@@ -162,17 +158,17 @@ static FMARCNetwork * _instance = nil;
     [self.manager.reachabilityManager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
         
         if (status == AFNetworkReachabilityStatusUnknown) {
-            XYLog(@"--- 未知网络 ---");
-            [JDStatusBarNotification showWithStatus:@"网络状态未知" styleName:JDStatusBarStyleWarning];
-            [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleWhite];
+//            XYLog(@"--- 未知网络 ---");
+//            [JDStatusBarNotification showWithStatus:@"网络状态未知" styleName:JDStatusBarStyleWarning];
+//            [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleWhite];
         }else if (status == AFNetworkReachabilityStatusNotReachable) {
   
-            [JDStatusBarNotification showWithStatus:@"网络不给力，请检查网络" styleName:JDStatusBarStyleWarning];
-            [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleWhite];
+//            [JDStatusBarNotification showWithStatus:@"网络不给力，请检查网络" styleName:JDStatusBarStyleWarning];
+//            [JDStatusBarNotification showActivityIndicator:YES indicatorStyle:UIActivityIndicatorViewStyleWhite];
             
         }else{
-            XYLog(@"--- 有网络 ---");
-             [JDStatusBarNotification dismiss];
+//            XYLog(@"--- 有网络 ---");
+//             [JDStatusBarNotification dismiss];
         }
     }];
     [self.manager.reachabilityManager startMonitoring];
@@ -189,8 +185,8 @@ static FMARCNetwork * _instance = nil;
      /// request 必须的有值
     if (!req) return [RACSignal error:[NSError errorWithDomain:HTTPServiceErrorDomain code:-1 userInfo:nil]];
     
-    NSString *accessToken = UserManager.accountModel.accessToken;
-    NSString *tokenType = UserManager.accountModel.tokenType;
+//    NSString *accessToken = UserManager.accountModel.accessToken;
+//    NSString *tokenType = UserManager.accountModel.tokenType;
     if (accessToken && accessToken.length > 0 && tokenType && tokenType.length > 0) {
         
         if (![req.path isEqualToString:apiGetH5Version]) {
