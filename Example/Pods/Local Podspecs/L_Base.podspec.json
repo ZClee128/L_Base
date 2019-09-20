@@ -1,0 +1,31 @@
+{
+  "name": "L_Base",
+  "version": "0.1.0",
+  "summary": "A short description of L_Base.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ZClee128/L_Base",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ZClee128": "876231865@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/ZClee128/L_Base.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "L_Base/Classes/**/*",
+  "static_framework": true,
+  "dependencies": {
+    "AFNetworking": [
+
+    ],
+    "ReactiveObjC": [
+
+    ]
+  }
+}
